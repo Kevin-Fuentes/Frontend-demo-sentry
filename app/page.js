@@ -22,7 +22,7 @@ const SHIPPING_BY_CITY = { Bogotá: 8, Medellín: 10, Cartagena: 14 };
 //   "Cannot read properties of undefined (reading 'city')"
 // Fix: return user.address?.city ?? "Ciudad desconocida";
 function getUserCity(user) {
-  return user.address.city;
+  return user.address?.city ?? "Ciudad desconocida";
 }
 
 const money = (n) => `$${n.toFixed(2)}`;
